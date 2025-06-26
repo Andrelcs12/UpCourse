@@ -72,7 +72,7 @@ const Page = () => {
   return (
     <div>
         <Navbar />
-      <HeaderXL />
+        <HeaderXL />
 
       <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 text-white px-6 py-8 md:px-10 md:py-12 xl:ml-72">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-2">{curso.titulo}</h1>
@@ -108,26 +108,16 @@ const Page = () => {
 
             <div className="flex flex-col gap-4">
               <div className="flex justify-between items-center gap-4">
-                <button
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 rounded-lg py-3 text-white font-bold text-lg transition-all duration-200 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-400 active:scale-98"
-                  type="button"
-                  aria-label="Adicionar ao carrinho"
-                >
+
+                <button className="flex-1 bg-blue-600 hover:bg-blue-700 rounded-lg py-3 text-white font-bold text-lg transition-all duration-200 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-400 active:scale-98">
                   Adicionar ao carrinho
                 </button>
-                <button
-                  className="flex-none flex items-center justify-center p-3 border-2 border-blue-600 rounded-lg text-blue-600 hover:bg-blue-100 transition-colors duration-300 active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-400"
-                  type="button"
-                  aria-label="Favoritar"
-                >
+                <button className="flex-none flex items-center justify-center p-3 border-2 border-blue-600 rounded-lg text-blue-600 hover:bg-blue-100 transition-colors duration-300 active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-400">
                   <Heart size={24} />
                 </button>
               </div>
 
-              <button
-                className="w-full py-3 border-2 border-blue-600 rounded-lg text-blue-600 font-semibold hover:bg-blue-50 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400"
-                type="button"
-              >
+              <button className="w-full py-3 border-2 border-blue-600 rounded-lg text-blue-600 font-semibold hover:bg-blue-50 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400">
                 Comprar agora
               </button>
             </div>
@@ -143,8 +133,7 @@ const Page = () => {
               <span className='font-bold text-blue-600'>{progressoPorcentagem}% Concluído</span>
             </div>
             <div className='relative w-full rounded-full h-3 bg-zinc-300 overflow-hidden'>
-              <div
-                className='bg-blue-600 h-full rounded-full transition-all duration-500 ease-in-out'
+              <div className='bg-blue-600 h-full rounded-full transition-all duration-500 ease-in-out'
                 style={{ width: `${progressoPorcentagem}%` }}
                 aria-valuenow={progressoPorcentagem}
                 aria-valuemin={0}
@@ -157,12 +146,8 @@ const Page = () => {
           </div>
 
           {curso.aulas.map((aula, index) => (
-            <div
-              key={index}
-              className="mb-4 border border-zinc-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              <button
-                onClick={() => toggleTopico(index)}
+            <div key={index} className="mb-4 border border-zinc-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+              <button onClick={() => toggleTopico(index)}
                 className="w-full cursor-pointer text-left px-6 py-4 bg-zinc-100 hover:bg-zinc-200 transition-colors flex justify-between items-center"
                 aria-expanded={topicoAberto === index}
                 aria-controls={`topico-${index}`}
@@ -175,19 +160,14 @@ const Page = () => {
               </button>
 
               {topicoAberto === index && (
-                <div
-                  id={`topico-${index}`}
-                  role="region"
+                <div id={`topico-${index}`}
                   aria-labelledby={`topico-button-${index}`}
-                  className="px-6 py-4 bg-white text-zinc-700 border-t border-zinc-200"
-                >
+                  className="px-6 py-4 bg-white text-zinc-700 border-t border-zinc-200">
                   <ul className="space-y-3">
                     {aula.videos.map((video) => (
-                      <li
-                        key={video.id}
+                      <li key={video.id}
                         className={`flex items-center justify-between gap-3 p-3 rounded-md transition-colors duration-200 
-                                  ${video.completo ? 'bg-green-50 text-green-700' : 'bg-zinc-100 hover:bg-blue-50 cursor-pointer'}`}
-                      >
+                                  ${video.completo ? 'bg-green-50 text-green-700' : 'bg-zinc-100 hover:bg-blue-50 cursor-pointer'}`}>
                         <div className="flex items-center gap-3 flex-1">
                           {video.completo ? (
                             <CheckCircle2 size={20} className="text-green-600 flex-shrink-0" />
