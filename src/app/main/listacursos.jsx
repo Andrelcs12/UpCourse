@@ -32,9 +32,9 @@ const Listacursos = () => {
         </div>
 
         <nav>
-          <ul className="flex gap-6  ">
+          <ul className="flex gap-3  ">
             <li>
-              <button className={`relative bg-red-300 cursor-pointer text-sm sm:text-base transition ${activeFilter === 'all' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
+              <button className={`relative cursor-pointer text-sm sm:text-base transition ${activeFilter === 'all' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
                 onClick={() => setActiveFilter('all')}
               >Todos
                 {activeFilter === 'all' && <span className="block h-[2px] w-full bg-blue-600 mt-1 rounded-full absolute bottom-0 left-0 transform translate-y-full" />}
