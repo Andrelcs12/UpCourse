@@ -11,7 +11,6 @@ const Header = () => {
         <div className='flex items-center bg-zinc-100 border border-zinc-300 rounded-lg px-4 py-2 gap-3 shadow-inner'>
           <Search className='text-zinc-500 w-5 h-5' />
           <input type="text" className='w-full bg-transparent outline-none text-sm text-zinc-700 placeholder:text-zinc-400' placeholder='Buscar cursos, professores, tópicos...'
-            value={searchTerm} onChange={handleSearchChange}
           />
         </div>
       </div>
