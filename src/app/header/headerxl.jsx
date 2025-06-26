@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import { ChevronDown, House, BookOpenText, ChartColumn, ChartPie, Flame, ArrowRight, Settings, LogOut, Menu, X } from 'lucide-react';
@@ -76,9 +76,7 @@ const HeaderXL = () => {
     <header className='w-full xl:hidden  h-20 bg-white border-b border-zinc-200 flex items-center justify-between px-6 gap-4 z-50 relative'>
       
       <div className='md:hidden'>
-        <button 
-          onClick={toggleMobileMenu} 
-          className='p-2 rounded-md cursor-pointer hover:bg-zinc-100 transition'
+        <button  onClick={toggleMobileMenu}  className='p-2 rounded-md cursor-pointer hover:bg-zinc-100 transition'
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,9 +84,7 @@ const HeaderXL = () => {
       </div>
 
       <div className='flex items-center gap-10 md:gap-40 w-full'>
-        <h1 className='text-2xl font-extrabold text-blue-600 tracking-tight'>
-          UpCourse
-        </h1>
+        <h1 className='text-2xl font-extrabold text-blue-600 tracking-tight'>UpCourse</h1>
         
         <nav className='hidden md:flex xl:hidden gap-6 w-full justify-around text-zinc-700 font-semibold'>
           <Link href="/" className='flex items-center gap-2 text-lg hover:text-blue-600 transition'>
@@ -107,12 +103,10 @@ const HeaderXL = () => {
       </div>
 
       <div className='relative profile-menu-container lg:hidden'>
-        <div
-          className='flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-100 cursor-pointer transition'
+        <div className='flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-100 cursor-pointer transition'
           onClick={toggleProfileMenu}
         >
-          <img
-            src="https://ui-avatars.com/api/?name=André+Lucas&background=2563eb&color=fff&size=36"
+          <img src="https://ui-avatars.com/api/?name=André+Lucas&background=2563eb&color=fff&size=36"
             alt="Avatar de André Lucas"
             className="h-9 w-9 rounded-full border border-zinc-200"
           />
@@ -122,8 +116,7 @@ const HeaderXL = () => {
         {isProfileMenuOpen && (
           <div className='absolute top-full right-0 mt-2 w-[300px] p-4 bg-white rounded-lg border border-zinc-200 shadow-lg z-50'>
             <div className='flex items-center gap-3 mb-4 p-2 rounded-lg bg-zinc-50'>
-              <img
-                src="https://ui-avatars.com/api/?name=André+Lucas&background=2563eb&color=fff&size=48"
+              <img src="https://ui-avatars.com/api/?name=André+Lucas&background=2563eb&color=fff&size=48"
                 alt="Avatar de André Lucas"
                 className="h-12 w-12 rounded-full border border-zinc-200"
               />
@@ -142,8 +135,7 @@ const HeaderXL = () => {
                 <div>
                   <p className='text-sm text-zinc-600 mb-2'>Continue seu aprendizado em <span className="font-semibold text-blue-700">{userProgress.courseTitle}</span>!</p>
                   <div className='relative w-full rounded-full h-2 bg-zinc-200 overflow-hidden'>
-                    <div
-                      className='bg-blue-600 h-full rounded-full transition-all duration-500 ease-in-out'
+                    <div className='bg-blue-600 h-full rounded-full transition-all duration-500 ease-in-out'
                       style={{ width: `${userProgress.percentage}%` }}
                       aria-valuenow={userProgress.percentage}
                       aria-valuemin={0}
