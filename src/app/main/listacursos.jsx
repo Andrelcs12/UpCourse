@@ -32,31 +32,30 @@ const Listacursos = () => {
         </div>
 
         <nav>
-          <ul className="flex gap-6">
+          <ul className="flex gap-6  ">
             <li>
-              <button className={`relative cursor-pointer text-sm transition ${activeFilter === 'all' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
+              <button className={`relative cursor-pointer text-sm sm:text-base transition ${activeFilter === 'all' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
                 onClick={() => setActiveFilter('all')}
-              >
-                Todos
+              >Todos
                 {activeFilter === 'all' && <span className="block h-[2px] w-full bg-blue-600 mt-1 rounded-full absolute bottom-0 left-0 transform translate-y-full" />}
               </button>
             </li>
             <li>
-              <button className={`relative cursor-pointer text-sm transition ${activeFilter === 'ongoing' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
+              <button className={`relative cursor-pointer text-sm sm:text-base transition ${activeFilter === 'ongoing' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
                 onClick={() => setActiveFilter('ongoing')}
-              > Em Andamento
+              >Em Andamento
                 {activeFilter === 'ongoing' && <span className="block h-[2px] w-full bg-blue-600 mt-1 rounded-full absolute bottom-0 left-0 transform translate-y-full" />}
               </button>
             </li>
             <li>
-              <button className={`relative cursor-pointer text-sm transition ${activeFilter === 'favorite' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
+              <button className={`relative cursor-pointer text-sm sm:text-base transition ${activeFilter === 'favorite' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
                 onClick={() => setActiveFilter('favorite')}
               >Favoritos
                 {activeFilter === 'favorite' && <span className="block h-[2px] w-full bg-blue-600 mt-1 rounded-full absolute bottom-0 left-0 transform translate-y-full" />}
               </button>
             </li>
             <li>
-              <button className={`relative cursor-pointer text-sm transition ${activeFilter === 'complete' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
+              <button className={`relative cursor-pointer text-sm sm:text-base transition ${activeFilter === 'complete' ? 'text-blue-600 font-semibold' : 'text-zinc-500 hover:text-zinc-800 font-medium'}`}
                 onClick={() => setActiveFilter('complete')}
               >Completos
                 {activeFilter === 'complete' && <span className="block h-[2px] w-full bg-blue-600 mt-1 rounded-full absolute bottom-0 left-0 transform translate-y-full" />}
